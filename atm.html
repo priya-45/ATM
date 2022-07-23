@@ -1,0 +1,57 @@
+<script>
+function fun(){
+    alert("WELCOME TO ATM\nPLEASE INSERT YOUR CARD")
+    function option(){
+        i=1
+        while (i<=5){
+            if (i==2){
+                break
+            }
+            a=5000
+            pin=parseInt(prompt("ENTER PIN"))
+            if (pin===1234){
+                trans=parseInt(prompt("ENTER A OPTION\nWHICH TRANSACTION YOU WANT PLEASE SELECT\n1)-WITHDRAW\n2)-DEPOSIT\n3)-BALANCE ENQUIRY\n4)-EXIT"))
+                if (trans===1){
+                    amt=parseInt(prompt("ENTER YOUR AMOUNT"))
+                    if (amt>=0 && amt<=5000){
+                        alert("COLLECT YOUR CASH AND YOUR CURRENT BALANCE IS")
+                        alert(a-amt)
+                    }
+                    else{
+                        alert("INSUFFICENT BALANCE")
+                    }
+                }
+                else if (trans===2){
+                    amt=parseInt(prompt("ENTER YOUR AMOUNT"))
+                    if (amt>=0 && amt<=5000){
+                        alert("COLLECT YOUR CASH AND YOUR CURRENT BALANCE IS")
+                        alert(a+amt)
+                    }
+                    else{
+                        alert("INSUFFICENT BALANCE")
+                    }
+                }
+                
+                else if (trans===3){
+                    alert(a)
+                    }
+                
+                else if (trans===4){
+                    window.close()
+                }
+                else{
+                    alert("OTHER BALANCE")
+                }
+            }
+            else{
+            alert("INCORRECT PIN")
+            option()
+            }
+        i=i+1
+    }
+    }
+    option()
+}
+fun()
+</script>
+
